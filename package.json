@@ -1,0 +1,22 @@
+{
+  "name": "multiplayer-pong-game",
+  "version": "1.0.0",
+  "description": "Web socket is an opening that forms a holder for data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmaksi/multiplayer-pong.git"
+  },
+  "author": "Mark Maksi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmaksi/multiplayer-pong/issues"
+  },
+  "homepage": "https://github.com/mmaksi/multiplayer-pong#readme",
+  "dependencies": {
+    "socket.io": "^4.5.1"
+  }
+}
