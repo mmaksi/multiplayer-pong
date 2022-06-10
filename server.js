@@ -20,10 +20,14 @@ io.on("connection", (socket) => {
   console.log("a user connected with the id", socket.id);
 
   socket.on("ready", () => {
-    readyPlayersCount++
-    console.log(`ready players: ${readyPlayersCount}`)
+    readyPlayersCount++;
+    console.log(`ready players: ${readyPlayersCount}`);
     if (readyPlayersCount === 2) {
-        io.emit("startGame", socket.id)
+      io.emit("startGame", socket.id);
     }
-})
+  });
+
+  socket.on("paddleMove", (paddleData) => {
+    socket.broadcast.emit("paddleMove", paddleData)
+  })
 });
