@@ -1,4 +1,5 @@
 # Multiplayer Pong Game
+This Multiplayer Pong Game allows each two users to play together in a single room. The front-end is made ready by a public community and I implemented the backend server to make it a multiplayer game with rooms and a single namespace using the power of Socket.io and Express.js.
 <p align="center">
     <img src="https://i.ibb.co/2qxxZmS/pong.png" />
 </p>
