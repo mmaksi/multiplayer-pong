@@ -5,6 +5,8 @@ const api = express();
 
 api.use(express.static(path.join(__dirname, 'public')));
 
-api.use('/', express.static('index.html'));
+api.use('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
+});
 
 module.exports = api;
