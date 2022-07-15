@@ -1,4 +1,5 @@
 # Multiplayer Pong Game
+![multiplayer-pong](https://i.ibb.co/2qxxZmS/pong.png)
 
 ## Polling
 - Polling is making a request every set amount of time. We make polling when we deal with data we don't know how to deal with; data that has its own lifecycle.
