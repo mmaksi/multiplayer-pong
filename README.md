@@ -31,3 +31,35 @@ WebSocket is a differnt protocol than HTTP, and just like HTTP has axios librari
 5. The referee emits the `ballMove` event including the `xPosition` to the server.
 6. The server listens to the `ballMove` event and pushes the `ballMove` to all connected clients on the same room except the sender.
    ![multiplayer-pong](https://i.ibb.co/mRM6pVP/game-sequence.png)
+
+## Socket.io Cheetsheet
+```
+io.on("connection", (socket) => {
+  // basic emit
+  socket.emit(/* ... */);
+
+  // to all clients in the current namespace except the sender
+  socket.broadcast.emit(/* ... */);
+
+  // to all clients in room1 except the sender
+  socket.to("room1").emit(/* ... */);
+
+  // to all clients in room1
+  io.in("room1").emit(/* ... */);
+
+  // to all clients in namespace "myNamespace"
+  io.of("myNamespace").emit(/* ... */);
+
+  // to all clients in room1 in namespace "myNamespace"
+  io.of("myNamespace").to("room1").emit(/* ... */);
+
+  // to individual socketid (private message)
+  io.to(socketId).emit(/* ... */);
+
+  // to all connected clients
+  io.emit(/* ... */);
+
+  // WARNING: `socket.to(socket.id).emit()` will NOT work, as it will send to everyone in the room
+  // named `socket.id` but the sender. Please use the classic `socket.emit()` instead.
+});
+```
