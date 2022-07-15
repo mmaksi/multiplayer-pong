@@ -22,4 +22,4 @@ WebSocket is a differnt protocol than HTTP, and just like HTTP has axios librari
 4. The server listens to the `paddleMove` event and pushes the `paddleData` to all connected clients on the same room except the sender.
 5. The referee emits the `ballMove` event including the `xPosition` to the server.
 6. The server listens to the `ballMove` event and pushes the `ballMove` to all connected clients on the same room except the sender.
-![multiplayer-pong](https://ibb.co/XWvSHrG)
+![multiplayer-pong](https://i.ibb.co/mRM6pVP/game-sequence.png)
