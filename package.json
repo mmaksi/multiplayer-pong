@@ -4,7 +4,7 @@
   "description": "Web socket is an opening that forms a holder for data",
   "main": "server.js",
   "engines": {
-    "node": "16.16.0"
+    "node": "14.17.6"
   },
   "scripts": {
     "start": "node server.js",
